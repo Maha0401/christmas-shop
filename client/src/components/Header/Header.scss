@@ -1,0 +1,43 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero{
+    height:20rem;
+    background-image: url('../../assets/images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include tablet{
+        height:22rem;
+    }
+    @include laptop{
+        height:25rem;
+    }
+    &__logo{
+        margin-top: 1rem;
+        @include tablet{
+            width: 10rem;
+            margin-top: 3rem;
+            margin-right: 7rem;
+        }
+    }
+    &__search{
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        font-size: inherit;
+        font-family: 'CaveatBrush';
+        width:10rem;
+        height:1rem;
+        margin-right: 1rem;
+        @include tablet{
+            margin-right: 5rem;
+            margin-top: 1rem;
+        }
+    }
+}
