@@ -71,7 +71,7 @@ router.post('/login', (req, res) => {
         process.env.JWT_SECRET_KEY,
     );
 
-    res.status(204).json({ 
+    res.json({ 
         message: "Successfully logged in",
         token: token 
     });

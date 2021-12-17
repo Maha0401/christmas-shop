@@ -1,0 +1,15 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.login{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    &__button{
+        @include cta-button;
+        width: 16rem;
+        margin-top: 2rem;
+    }
+}

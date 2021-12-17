@@ -1,0 +1,17 @@
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/colors" as *;
+@use "./styles/partials/mixins" as *;
+
+html{
+  font-size: 16px;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin:0;
+  padding-left: 2rem;
+  padding-right:2rem;
+  font-family: $font-stack;
+}

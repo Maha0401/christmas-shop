@@ -1,0 +1,51 @@
+@use "./colors" as *;
+@use "./typography" as *;
+@use "./variables" as *;
+
+// media queries
+@mixin tablet{
+    @media (min-width:$tablet){
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media (min-width:$laptop){
+        @content;
+    }
+}
+
+//paddings
+@mixin side-paddings{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    @include tablet{
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+    @include laptop{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+//buttons
+@mixin cta-button{
+    height: 2.5rem;
+    border-radius: $border-radius;
+    color: $black;
+    background-color: $darker-blue;
+    font-family: 'CaveatBrush';
+    &:hover{
+        background-color: $red;
+    }
+    &:active{
+        background-color: $red;
+    }
+    @include tablet{
+        min-width: 10rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+

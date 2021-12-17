@@ -1,0 +1,28 @@
+.field {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    &__input {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        font-size: inherit;
+        font-family: 'CaveatBrush';
+        width:15rem;
+    }
+
+    &__desc-txtbox{
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-size: inherit;
+        font-family: 'CaveatBrush';
+    }
+}

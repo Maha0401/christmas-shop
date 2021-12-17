@@ -1,0 +1,14 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    &__logout{
+        @include cta-button;
+        width: 5rem;
+        margin-top: 1rem;
+    }
+}
