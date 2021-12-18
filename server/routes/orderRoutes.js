@@ -29,6 +29,16 @@ router.route("/")
             orderPrice:orderPrice,
             fulfilled:false,
         };
+        
+        knex('product')
+        .where({ 'id': productId })
+        .then((data) => {
+            let updatedStock = Number(data[0].stock)-1;
+            knex('product')
+            .where({ 'id': productId })
+            .update({'stock': updatedStock.toString() })
+            .then((res)=>{})
+        })
     
         knex("order").insert({productName: productName,
             productId: productId,

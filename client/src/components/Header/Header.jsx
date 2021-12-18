@@ -10,7 +10,7 @@ class Header extends React.Component {
     }
 
     handleLogoClick = () => {
-        this.props.history.push('/admin-home')
+        this.props.history.push('/')
     }
 
     handleSearch = () => {
