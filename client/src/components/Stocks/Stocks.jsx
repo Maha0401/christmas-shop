@@ -3,7 +3,7 @@ import React from 'react'
 function Stocks() {
     return (
         <div>
-            stocks
+            <h3>Available Stocks</h3>
         </div>
     )
 }

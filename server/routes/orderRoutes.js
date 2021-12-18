@@ -56,6 +56,11 @@ router.route("/")
 
 //http://localhost:8080/order/notfullfilled
 router.route("/notfullfilled").get((_req,res)=>{
+    knex("order")
+    .then((data) => {
+        orderList = data;
+    })
+    .catch((err) => console.log(`Error retrieving orders: ${err}`))
     let filteredOrders = orderList.filter(order=> order.fulfilled === 0)
     res.status(200).json(filteredOrders);
 });
@@ -74,9 +79,12 @@ router.route("/fullfilled/:orderId").put((req,res)=>{
         knex('order')
         .where({ 'id': req.params.orderId })
         .update({'fulfilled': 1 })
-        .then((res)=>{})
-
-        return res.status(202).send('Order Fulfilled')
+        .then((res)=>{
+            
+        })
+        .then(()=>{
+            return res.status(202).send('Order Fulfilled')
+        })
 });
 
     module.exports = router;
