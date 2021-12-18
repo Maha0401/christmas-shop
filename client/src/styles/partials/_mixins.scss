@@ -34,13 +34,13 @@
     height: 2.5rem;
     border-radius: $border-radius;
     color: $black;
-    background-color: $darker-blue;
+    background-color: #497dfb;
     font-family: 'CaveatBrush';
     &:hover{
-        background-color: $red;
+        background-color: #f5a240;
     }
     &:active{
-        background-color: $red;
+        background-color: #f5a240;
     }
     @include tablet{
         min-width: 10rem;

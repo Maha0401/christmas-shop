@@ -9,6 +9,7 @@
     color: $white;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-bottom: .5rem;
     &__contact-address{
         display: flex;
         justify-content: space-around;
@@ -20,5 +21,17 @@
         text-align: center;
         font-size: 2rem;
         margin-bottom: 1rem;
+    }
+    &__login{
+        text-decoration: none;
+        color:black;
+        background-color: $blue;
+        padding: 0 1rem;
+        border-radius: $border-radius;
+        margin-left: 20vw;
+        margin-top: 2rem;
+    }
+    &__copy-right{
+        font-size: .75rem;
     }
 }

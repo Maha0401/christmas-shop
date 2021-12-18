@@ -18,9 +18,11 @@ class AdminHeader extends React.Component {
     render(){
         return (
             <div className='header'>
-                <h1 className='header__greeting'>Welcome! {this.props.username}</h1>
                 <img onClick={this.handleLogoClick} className='header__logo' src={Logo} alt='Jonar logo'></img>
-                <button className='header__logout' onClick={this.handleLogOut}>Log Out</button>
+                <div className='header__user-info'>
+                    <h1 className='header__greeting'>Welcome! {this.props.username}</h1>
+                    <button className='header__logout' onClick={this.handleLogOut}>Log Out</button>
+                </div>
             </div>
         )
     }

@@ -1,6 +1,9 @@
 import React from 'react'
 import AdminHeader from '../../components/AdminHeader/AdminHeader'
 import axios from 'axios'
+import Stocks from '../../components/Stocks/Stocks'
+import Graphs from '../../components/Graphs/Graphs'
+import Orders from '../../components/Orders/Orders'
 
 class AdminHome extends React.Component {
 
@@ -38,6 +41,9 @@ class AdminHome extends React.Component {
         
             <div>
                 <AdminHeader username={userInfo.username}/>
+                <Orders />
+                <Stocks />
+                <Graphs />
             </div>
         )
     }
