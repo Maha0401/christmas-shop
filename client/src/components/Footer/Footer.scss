@@ -1,0 +1,22 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer{
+    background-color: #0f3a6f;
+    margin-top: 3rem;
+    color: $white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    &__contact-address{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0;
+    }
+    &__quote{
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
