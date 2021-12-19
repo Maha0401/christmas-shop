@@ -42,7 +42,7 @@ class AdminHome extends React.Component {
         :
             (
         
-            <div>
+            <div className='admin'>
                 <AdminHeader username={userInfo.username}/>
                 <div className='orders-stocks'>
                     <Orders />

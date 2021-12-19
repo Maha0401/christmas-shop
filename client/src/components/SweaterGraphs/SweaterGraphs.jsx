@@ -32,8 +32,8 @@ class SweaterGraphs extends React.Component {
                         labels: ['Pair Christmas Sweater','Beautiful green sweater','Christmas baby sweater','Reindeer Christmas sweater with beanie cap','christmas dog sweater','Designer christmas sweater'],
                         datasets: [
                             {
-                                label: 'Dec 2021',
-                                data:[this.state.decData[0],this.state.decData[1],this.state.decData[2],this.state.decData[3],this.state.decData[4],this.state.decData[5]],
+                                label: 'Nov 2021',
+                                data:[this.state.novData[0],this.state.novData[1],this.state.novData[2],this.state.novData[3],this.state.novData[4],this.state.novData[5]],
                                 backgroundColor: [
                                     'rgba(255,99,132,0.6)',
                                     'rgba(54,162,235,0.6)',
@@ -45,8 +45,8 @@ class SweaterGraphs extends React.Component {
                                 ]
                             },
                             {
-                                label: 'Nov 2021',
-                                data:[this.state.novData[0],this.state.novData[1],this.state.novData[2],this.state.novData[3],this.state.novData[4],this.state.novData[5]],
+                                label: 'Dec 2021',
+                                data:[this.state.decData[0],this.state.decData[1],this.state.decData[2],this.state.decData[3],this.state.decData[4],this.state.decData[5]],
                                 backgroundColor: [
                                     'rgba(255,99,132,0.6)',
                                     'rgba(54,162,235,0.6)',

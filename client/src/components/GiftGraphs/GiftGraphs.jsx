@@ -32,8 +32,8 @@ class GiftGraphs extends React.Component {
                         labels: ['Solar System Crystal Ball','No Face with Night Lamp','Insulated Wine Tumbler with Straw and Lid','Spotify Plaque Christmas Gifts','Custom Camera Roll Pictures Keychain'],
                         datasets: [
                             {
-                                label: 'Dec 2021',
-                                data:[this.state.decData[11],this.state.decData[12],this.state.decData[13],this.state.decData[14],this.state.decData[15]],
+                                label: 'Nov 2021',
+                                data:[this.state.novData[10],this.state.novData[11],this.state.novData[12],this.state.novData[13],this.state.novData[14]],
                                 backgroundColor: [
                                     'rgba(255,99,132,0.6)',
                                     'rgba(54,162,235,0.6)',
@@ -45,8 +45,8 @@ class GiftGraphs extends React.Component {
                                 ]
                             },
                             {
-                                label: 'Nov 2021',
-                                data:[this.state.novData[11],this.state.novData[12],this.state.novData[13],this.state.novData[14],this.state.novData[15]],
+                                label: 'Dec 2021',
+                                data:[this.state.decData[10],this.state.decData[11],this.state.decData[12],this.state.decData[13],this.state.decData[14]],
                                 backgroundColor: [
                                     'rgba(255,99,132,0.6)',
                                     'rgba(54,162,235,0.6)',
@@ -56,7 +56,7 @@ class GiftGraphs extends React.Component {
                                     'rgba(255,159,64,0.6)',
                                     'rgba(255,99,132,0.6)',
                                 ]
-                            }
+                            },
                         ]
             
                     },

@@ -32,8 +32,8 @@ class DecorGraphs extends React.Component {
                         labels: ['Max mit Christmas Stockings, Hanging','24 Mini Glitter Christmas Tree Balls','Christmas Inflatable Outdoor Decor','12 Inch Artificial Christmas Wreath'],
                         datasets: [
                             {
-                                label: 'Dec 2021',
-                                data:[this.state.decData[7],this.state.decData[8],this.state.decData[9],this.state.decData[10]],
+                                label: 'Nov 2021',
+                                data:[this.state.novData[6],this.state.novData[7],this.state.novData[8],this.state.novData[9]],
                                 backgroundColor: [
                                     'rgba(255,99,132,0.6)',
                                     'rgba(54,162,235,0.6)',
@@ -45,8 +45,8 @@ class DecorGraphs extends React.Component {
                                 ]
                             },
                             {
-                                label: 'Nov 2021',
-                                data:[this.state.novData[7],this.state.novData[8],this.state.novData[9],this.state.novData[10]],
+                                label: 'Dec 2021',
+                                data:[this.state.decData[6],this.state.decData[7],this.state.decData[8],this.state.decData[9]],
                                 backgroundColor: [
                                     'rgba(255,99,132,0.6)',
                                     'rgba(54,162,235,0.6)',
@@ -56,7 +56,7 @@ class DecorGraphs extends React.Component {
                                     'rgba(255,159,64,0.6)',
                                     'rgba(255,99,132,0.6)',
                                 ]
-                            }
+                            },
                         ]
             
                     },
