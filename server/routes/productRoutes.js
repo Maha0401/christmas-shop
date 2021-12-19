@@ -29,6 +29,11 @@ router.route("/category/:category").get((req,res)=>{
 
 //http://localhost:8080/product/stocks
 router.route("/stocks").get((_req,res)=>{
+    knex("product")
+    .then((data) => {
+        productList = data;
+    })
+    .catch((err) => console.log(`Error retrieving products: ${err}`))
     let stockList = productList.map(product => {
         let stock = {
             id: product.id,

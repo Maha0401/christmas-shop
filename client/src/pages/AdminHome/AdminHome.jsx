@@ -2,9 +2,11 @@ import React from 'react'
 import AdminHeader from '../../components/AdminHeader/AdminHeader'
 import axios from 'axios'
 import Stocks from '../../components/Stocks/Stocks'
-import Graphs from '../../components/Graphs/Graphs'
+import SweaterGraphs from '../../components/SweaterGraphs/SweaterGraphs'
 import Orders from '../../components/Orders/Orders'
 import './AdminHome.scss'
+import DecorGraphs from '../../components/DecorGraphs/DecorGraphs'
+import GiftGraphs from '../../components/GiftGraphs/GiftGraphs'
 
 class AdminHome extends React.Component {
 
@@ -46,7 +48,9 @@ class AdminHome extends React.Component {
                     <Orders />
                     <Stocks />
                 </div>
-                <Graphs />
+                <SweaterGraphs />
+                <DecorGraphs />
+                <GiftGraphs />
             </div>
         )
     }

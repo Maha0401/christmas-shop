@@ -45,7 +45,7 @@ module.exports = [
     },
     {
         id: 5,
-        productName: 'christmas dog sweater',
+        productName: 'Christmas dog sweater',
         description: 'Featuring a stunning color, vibrant graphic, super-soft material, this shirt is just to die for.',
         category: 'sweater',
         color: 'red',

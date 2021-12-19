@@ -1,0 +1,10 @@
+.graph{
+    margin-top: 3rem;
+    &__bar{
+        width:75vw;
+        margin: auto;
+    }
+    &__header{
+        text-align: center;
+    }
+}
