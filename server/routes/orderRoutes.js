@@ -11,7 +11,6 @@ knex("order")
 })
 .catch((err) => console.log(`Error retrieving orders: ${err}`))
 
-
 router.route("/")
     //http://localhost:8080/order/
     .get((_req,res) =>{
@@ -87,4 +86,50 @@ router.route("/fullfilled/:orderId").put((req,res)=>{
         })
 });
 
-    module.exports = router;
+//http://localhost:8080/order/sale/dec2021
+router.route("/sale/dec2021").get((req,res)=>{
+    knex('order').select('productId')
+    .where('timeStamp', '>=', '2021-12-1 00:00:01')
+    .where('timeStamp', '<', '2021-12-31 11:59:59')
+    .sum({total:'orderPrice'})
+    .groupBy('productId')
+    .orderBy('productId')
+    .then((data)=>{
+        let saleArr = []
+        for (let i=1; i<=15; i++){
+            let product = data.find((product=>i===product.productId))
+            if(product){
+                saleArr.push(product.total)
+            }
+            else{
+                saleArr.push(0)
+            }
+        }
+        res.status(200).send(saleArr)
+    })
+});
+
+//http://localhost:8080/order/sale/nov2021
+router.route("/sale/nov2021").get((req,res)=>{
+    knex('order').select('productId')
+    .where('timeStamp', '>=', '2021-11-1 00:00:01')
+    .where('timeStamp', '<', '2021-11-30 11:59:59')
+    .sum({total:'orderPrice'})
+    .groupBy('productId')
+    .orderBy('productId')
+    .then((data)=>{
+        let saleArr = []
+        for (let i=1; i<=15; i++){
+            let product = data.find((product=>i===product.productId))
+            if(product){
+                saleArr.push(product.total)
+            }
+            else{
+                saleArr.push(0)
+            }
+        }
+        res.status(200).send(saleArr)
+    })
+});
+
+module.exports = router;

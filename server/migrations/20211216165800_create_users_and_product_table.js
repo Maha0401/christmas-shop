@@ -22,7 +22,7 @@ exports.up = function(knex) {
     .createTable('order', (table) => {
         table.increments('id').primary();
         table.string('productName').notNullable();
-        table.string('productId').notNullable();;
+        table.integer('productId').notNullable();;
         table.string('picUrlPath');
         table.string('orderPrice');
         table.boolean('fulfilled');

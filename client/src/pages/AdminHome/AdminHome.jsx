@@ -35,7 +35,7 @@ class AdminHome extends React.Component {
 
         const { isLoading, userInfo } = this.state
         return isLoading ? 
-            <h1>Loading...</h1> 
+            <h1>Snowing and Loading...</h1> 
         :
             (
         

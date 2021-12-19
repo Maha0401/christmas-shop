@@ -48,21 +48,21 @@ class Orders extends React.Component {
 
     render(){
         return this.state.isLoading ? 
-            <h1>Loading...</h1> 
+            <h1>Snowing and Loading...</h1> 
         :
             (
             <div>
-            <div className='orders'>
-                <h2 className='orders__header'>Current Orders</h2>
-                {this.state.orderList.map(order=>{
-                    return (
-                        <div className='order'>
-                            <img className='order__image' src={`http://localhost:8080/${order.picUrlPath}`} alt={`${order.productName} poster`}></img>
-                            <h3 className='order__name'>Product: {order.productName}</h3>                            
-                            <input onClick={()=>this.handleFulfilled(order.id)} className='order__button' type='button' value='Fullfilled'></input>
-                        </div>  
-                    )
-                })}
+                <div className='orders'>
+                    <h2 className='orders__header'>Current Orders</h2>
+                    {this.state.orderList.map(order=>{
+                        return (
+                            <div className='order'>
+                                <img className='order__image' src={`http://localhost:8080/${order.picUrlPath}`} alt={`${order.productName} poster`}></img>
+                                <h3 className='order__name'>Product: {order.productName}</h3>                            
+                                <input onClick={()=>this.handleFulfilled(order.id)} className='order__button' type='button' value='Fullfilled'></input>
+                            </div>  
+                        )
+                    })}
                 </div>
             </div>
         )
