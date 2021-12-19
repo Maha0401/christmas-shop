@@ -4,15 +4,16 @@
 ChristmasShop was made using create-react-app, react-router, chart.js and SASS for the front end, a Node/Express backend API with JWT for auth, and Knex to query a MySQL database. At least for now. We'll see how things change as I continue to build on it.
 
 Functionalities:
- 1. Search products based on category
- 2. Search by textbox
- 3. Sort by price
- 4. Filter by color
- 5. buy using buyButton 
- 6. Admin login
- 6. Order fullfillment
- 7. Available Stocks display
- 8. Graphs that displays comparitive sales data on monthly basis for each product
+ 1. Responsive design for shop pages
+ 2. Search products based on category
+ 3. Search by textbox
+ 4. Sort by price
+ 5. Filter by color
+ 6. buy using buyButton 
+ 7. Admin login
+ 8. Order fullfillment
+ 9. Available Stocks display
+ 10. Graphs that displays comparitive sales data on monthly basis for each product
 
 Thanks for stopping by. 🎅🎄❄🎁
 
