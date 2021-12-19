@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import './Stocks.scss'
 
 class Stocks extends React.Component {
 
@@ -38,19 +39,20 @@ class Stocks extends React.Component {
             (
             <div>
                 <div className='stocks'>
-                    <h2>Available Stocks</h2>
-                    {
-                    //     this.state.stockList.map(stock=>{
-                    //     return (
-                    //         <div className='stock'>
-                    //             {console.log(stock)}
-                    //             <img className='stock__image' src={`http://localhost:8080/${stock.picUrlPath}`} alt={`${stock.productName} poster`}></img>
-                    //             <h3 className='stock__name'>{stock.name}</h3>   
-                    //             <p>Available: {stock.stock}</p>                         
-                    //         </div>  
-                    //     )
-                    // })
-                }
+                    <h2 className='stocks__header'>Available Stocks</h2>
+                    
+                        {this.state.stockList.map(stock=>{
+                        return (
+                            <div className='stock'>
+                                <img className='stock__image' src={`http://localhost:8080/${stock.picUrlPath}`} alt={`${stock.productName} poster`}></img>
+                                <div className='stock__info' >
+                                    <h4 className='stock__name'>{stock.name}</h4>
+                                    <p className='stock__available'>Available: {stock.stock}</p>
+                                </div>                         
+                            </div>  
+                        )
+                        })}
+                
                 </div>
             </div>
         )

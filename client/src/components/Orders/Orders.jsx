@@ -58,8 +58,10 @@ class Orders extends React.Component {
                         return (
                             <div className='order'>
                                 <img className='order__image' src={`http://localhost:8080/${order.picUrlPath}`} alt={`${order.productName} poster`}></img>
-                                <h3 className='order__name'>Product: {order.productName}</h3>                            
-                                <input onClick={()=>this.handleFulfilled(order.id)} className='order__button' type='button' value='Fullfilled'></input>
+                                <div className='order__info'>
+                                    <h4 className='order__name'>{order.productName}</h4>
+                                    <input onClick={()=>this.handleFulfilled(order.id)} className='order__button' type='button' value='Fulfilled'></input>
+                                </div>
                             </div>  
                         )
                     })}

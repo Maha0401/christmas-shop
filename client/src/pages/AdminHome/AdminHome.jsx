@@ -4,6 +4,7 @@ import axios from 'axios'
 import Stocks from '../../components/Stocks/Stocks'
 import Graphs from '../../components/Graphs/Graphs'
 import Orders from '../../components/Orders/Orders'
+import './AdminHome.scss'
 
 class AdminHome extends React.Component {
 
@@ -41,8 +42,10 @@ class AdminHome extends React.Component {
         
             <div>
                 <AdminHeader username={userInfo.username}/>
-                <Orders />
-                <Stocks />
+                <div className='orders-stocks'>
+                    <Orders />
+                    <Stocks />
+                </div>
                 <Graphs />
             </div>
         )

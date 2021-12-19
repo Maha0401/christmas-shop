@@ -18,7 +18,7 @@ function Footer() {
                     <p>H2N 1A4, Canada</p>
                 </div>
             </div>
-            <Link className='footer__login' to='./login' >Admin Login</Link>
+            <Link className='footer__login' to='/login' >Admin Login</Link>
             <p className='footer__copy-right'>©Jonar 2021</p>
         </div>
     )

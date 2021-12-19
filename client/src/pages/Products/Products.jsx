@@ -132,6 +132,13 @@ class Products extends React.Component {
         }
     }
 
+    filterProducts = (e) => {
+        //filter only products displays on the screen
+        this.setState({
+            products: this.state.products.filter((product)=>e.target.value === product.color)
+        });
+    }
+
     render(){
         return this.state.isLoading ? 
             <h1>Loading...</h1> 
@@ -154,7 +161,7 @@ class Products extends React.Component {
                         <option value="asc">Low to High</option>
                         <option value="desc">High to Low</option>
                     </select>
-                    <select name='filter'                     
+                    <select name='filter' onChange={this.filterProducts}                  
                         className="products-hero__filter">
                         <option value="">Filter Color</option>
                         <option value="red">Red</option>
