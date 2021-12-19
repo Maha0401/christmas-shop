@@ -2,6 +2,8 @@ import React from 'react'
 import Logo from '../../assets/images/jonar.png'
 import './Products.scss'
 import axios from 'axios'
+import Footer from '../../components/Footer/Footer'
+import orderSuccess from '../../assets/images/bg-home-alone-3.jpg'
 
 
 class Products extends React.Component {
@@ -100,6 +102,36 @@ class Products extends React.Component {
         }
     }
 
+    sortAsc = (products) => {   
+        products.sort(function(a, b){
+            var A = a.price
+            var B = b.price
+            return A - B;
+        });
+        return products;
+    }
+    sortDesc = (products) => {
+        products.sort(function(a, b){
+            var A = a.price
+            var B = b.price
+            return B - A;
+        });
+        return products;
+    }
+
+    sortPrice = (order) => {
+        if(order === 'asc'){
+            this.setState({
+                products: this.sortAsc(this.state.products)
+            });
+        }
+        else if(order === 'desc'){
+            this.setState({
+                products: this.sortDesc(this.state.products)
+            });
+        }
+    }
+
     render(){
         return this.state.isLoading ? 
             <h1>Loading...</h1> 
@@ -116,25 +148,42 @@ class Products extends React.Component {
                         placeholder="Search"
                         value={this.state.query}>
                     </input>
+                    <select name='sort' onChange={(e) => this.sortPrice(e.target.value)}                    
+                        className="products-hero__sort">
+                        <option value="">Sort Price</option>
+                        <option value="asc">Low to High</option>
+                        <option value="desc">High to Low</option>
+                    </select>
+                    <select name='filter'                     
+                        className="products-hero__filter">
+                        <option value="">Filter Color</option>
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="black">Black</option>
+                    </select>
                 </div>
                 <div className='products__product-list'>
                     {this.state.products.map(product => {
                         return(
-                            <div className='products__product' key = {product.id}>
-                                <img className='products__product-image' src={`http://localhost:8080/${product.picUrlPath}`} alt={`${product.productName} poster`}></img>
-                                <h2 className='products__product-name'>{product.productName}</h2>
-                                <h2 className='products__product-description'>{product.description}</h2>
-                                <input type='button' onClick={()=>this.buyButtonHandle(product)} value='Buy' ></input>
+                            <div className='product-list' key = {product.id}>
+                                <img className='product-list__product-image' src={`http://localhost:8080/${product.picUrlPath}`} alt={`${product.productName} poster`}></img>
+                                <h2 className='product-list__product-name'>{product.productName}</h2>
+                                <h2 className='product-list__product-description'>{product.description}</h2>
+                                <p>${product.price}</p>
+                                <input className='product-list__button' type='button' onClick={()=>this.buyButtonHandle(product)} value='Buy' ></input>
                             </div>
                             )}
                     )}        
                 </div>
                 <div className={'order__popup '+this.state.display}>
                     <div className='order__popup-content'>
+                        <img className='order__image' src={orderSuccess} alt = 'nice selection' ></img>
                         <p className='order__successful'>Ordered Successful</p>
                         <input className='order__okay-button' onClick={this.okayModalHandler} type='button' value='ok'></input>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

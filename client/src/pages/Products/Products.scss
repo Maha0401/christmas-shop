@@ -37,9 +37,38 @@
         width:10rem;
         height:1rem;
         margin-right: 1rem;
+        margin-top: 1rem;
         @include tablet{
             margin-right: 5rem;
             margin-top: 1rem;
+        }
+    }
+    &__sort{
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        padding: 0.3rem;
+        font-size: inherit;
+        font-family: 'CaveatBrush';
+        width:11rem;
+        height:2rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        @include tablet{
+            margin-right: 5rem;
+        }
+    }
+    &__filter{
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+        padding: 0.3rem;
+        font-size: inherit;
+        font-family: 'CaveatBrush';
+        width:11rem;
+        height:2rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        @include tablet{
+            margin-right: 5rem;
         }
     }
 }
@@ -55,6 +84,74 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(219, 223, 235, 0.7);
+        background: rgba(18, 18, 19, 0.9);
+    }
+    &__image{
+        width: 10rem;
+        height: 12rem;
+        object-fit: cover;
+        margin-top: 5rem;
+    }
+    &__successful{
+        margin-top: 1rem;
+        text-align: center;
+        color:white;
+    }
+    &__okay-button{
+        @include cta-button;
+        width: 4rem;
+        margin-top: 1rem;
+        height: 1.5rem;
+    }
+    &__popup-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.product-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-around;
+    }   
+    &__product-image{
+        width:10rem;
+        height:10rem;
+        object-fit: cover;
+        border-radius: .25rem;
+        box-shadow: .5rem .5rem .25rem #aaaaaa;
+    }
+    &__product-name{
+        text-align: center;
+        margin-bottom: .5rem;
+        font-size: 1.25rem;
+        @include tablet{
+            width: 15vw;
+        }
+    }
+    &__product-description{
+        font-size: .75rem;
+        width:60vw;
+        text-align: center;
+        margin: auto;
+        @include tablet{
+            width: 15vw;
+            margin: 0
+        }
+    }
+    &__button{
+        @include cta-button;
+        width: 5rem;
+        height: 1.5rem;
     }
 }

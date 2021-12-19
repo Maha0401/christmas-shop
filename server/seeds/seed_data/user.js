@@ -1,7 +1,7 @@
 module.exports = [
     {
         id: 1,
-        userName: 'jonaruser',
-        password: 'jonaruser',
+        userName: 'maha',
+        password: 'maha',
     },
   ];

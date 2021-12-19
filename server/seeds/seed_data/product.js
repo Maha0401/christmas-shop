@@ -8,7 +8,7 @@ module.exports = [
       picUrlPath: '/product/1.jpg',
       likes: '25',
       stock: '156',
-      price: '10'
+      price: '50'
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ module.exports = [
         picUrlPath: '/product/2.jpg',
         likes: '2906',
         stock: '176',
-        price: '10'
+        price: '20'
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ module.exports = [
         picUrlPath: '/product/3.jpg',
         likes: '23',
         stock: '150',
-        price: '10'
+        price: '30'
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ module.exports = [
         picUrlPath: '/product/4.jpg',
         likes: '27',
         stock: '146',
-        price: '10'
+        price: '25'
     },
     {
         id: 5,
@@ -52,7 +52,7 @@ module.exports = [
         picUrlPath: '/product/5.jpg',
         likes: '55',
         stock: '152',
-        price: '10'
+        price: '32'
     },
     {
         id: 6,
@@ -63,7 +63,7 @@ module.exports = [
         picUrlPath: '/product/6.jpg',
         likes: '22',
         stock: '126',
-        price: '10'
+        price: '100'
     },
     {
         id: 7,
@@ -85,7 +85,7 @@ module.exports = [
         picUrlPath: '/product/8.jpg',
         likes: '790',
         stock: '600',
-        price: '10'
+        price: '5'
     },
     {
         id: 9,
@@ -96,7 +96,7 @@ module.exports = [
         picUrlPath: '/product/9.jpg',
         likes: '225',
         stock: '500',
-        price: '10'
+        price: '55'
     },
     {
         id: 10,
@@ -107,7 +107,7 @@ module.exports = [
         picUrlPath: '/product/10.jpg',
         likes: '428',
         stock: '156',
-        price: '10'
+        price: '35'
     },
     {
         id: 11,
@@ -118,7 +118,7 @@ module.exports = [
         picUrlPath: '/product/11.jpg',
         likes: '25',
         stock: '15',
-        price: '10'
+        price: '100'
     },
     {
         id: 12,
@@ -129,7 +129,7 @@ module.exports = [
         picUrlPath: '/product/12.jpg',
         likes: '2500',
         stock: '116',
-        price: '10'
+        price: '200'
     },
     {
         id: 13,
@@ -140,7 +140,7 @@ module.exports = [
         picUrlPath: '/product/13.jpg',
         likes: '2',
         stock: '1156',
-        price: '10'
+        price: '49'
     },
     {
         id: 14,
@@ -151,7 +151,7 @@ module.exports = [
         picUrlPath: '/product/14.jpg',
         likes: '2500005',
         stock: '6',
-        price: '10'
+        price: '250'
     },
     {
         id: 15,
@@ -162,6 +162,6 @@ module.exports = [
         picUrlPath: '/product/15.png',
         likes: '225',
         stock: '87',
-        price: '10'
+        price: '39'
     },
   ];

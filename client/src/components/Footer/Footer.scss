@@ -14,8 +14,6 @@
         display: flex;
         justify-content: space-around;
         margin-top: 0;
-        @include tablet{
-        }
     }
     &__quote{
         text-align: center;
@@ -33,5 +31,6 @@
     }
     &__copy-right{
         font-size: .75rem;
+        text-align: right;
     }
 }

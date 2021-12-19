@@ -17,15 +17,11 @@
         margin-top: 2rem;
     }
     &__image{
-        width: 60vw;
-        height: 60vw;
+        width:10rem;
+        height:10rem;
         object-fit: cover;
         border-radius: .25rem;
         box-shadow: .5rem .5rem .25rem #aaaaaa;
-        @include tablet{
-            width:10rem;
-            height:10rem;
-        }
     }
     &__name{
         text-align: center;
