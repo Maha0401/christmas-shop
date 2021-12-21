@@ -58,18 +58,21 @@ Follow these steps to run a local instance of ChristmasShop:
    ```bash
    $ npx nodemon server.js
    ```
+   
+8. Make sure the the port is 8080, if not kill other ports and restart the server
+
 #### Set up the frontend
-8. Install client dependencies:  
+9. Install client dependencies:  
    
    Run `npm install` from inside the client directory.
    ```bash    
    $ cd ../client
    $ npm install
    ```
-9. Start the React app:
+10. Start the React app:
     ```bash
     $ npm start
     ```
-10. For admin login (Seeded data)
+11. For admin login (Seeded data)
     username:maha
     password:maha
